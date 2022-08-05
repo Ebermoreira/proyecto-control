@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Project | control</title>
+    <link rel="shortcut icon" href="imagenes/control1.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css-principal/usuario.css">
+</head>
+<body>
+
+   
+       <form  class="formulario" id="form">
+        <div class="form-caja">
+            <h1 class="img-form">CONTROL</h1>
+            <div class="grupo-inputs">
+                <input type="text" id="name" name="nombre" required placeholder="Nombre o usuario"><span class="barra-color"></span>
+                <label for="">Nombre</label>
+            </div>
+
+            <div class="grupo-inputs">
+                <input type="email" id="email" name="email" required placeholder="Correo electronico"><span class="barra-color"></span>
+                <label for="">Email</label>
+            </div>
+
+            <div class="grupo-inputs">
+                <input type="password" id="password" name="password" required placeholder="Escribe tu contraseña"><span class="barra-color"></span>
+                <label for="">Password</label>
+            </div>
+
+            <button type="submit">Registrarse</button>
+
+            <a href="index.html">volver</a>
+            <p class="warnings" id="warnings"></p>
+        </div>
+       </form>
+         <script src="validacion/validar-formulario.js"></script>
+   
+</body>
+</html>

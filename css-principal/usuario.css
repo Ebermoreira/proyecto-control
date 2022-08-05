@@ -1,0 +1,235 @@
+:root{
+  --colortextos: #e20a0a67;
+}
+
+
+
+*,
+::before,
+::after  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  
+    background: url('../imagenes/usuario.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Anonymous Pro', monospace;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.img-form{
+  color: transparent;
+  
+  text-transform: uppercase;
+ display: inline-block;
+  font-size: 50px;
+ margin-left: 110px;
+  background-image: url('../imagenes/control-historia.jpg');
+  background-size: cover;
+  background-position-y:center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  letter-spacing: 10px;
+  font-weight: 700;
+  border-bottom: 3px solid var(--colortextos);
+  
+}
+.img-form:hover{
+  border-radius: 25px;
+  border-right: 3px solid var(--colortextos);
+  transition: all 600ms ease;
+}
+.formulario{
+  background-color: white;
+  padding: 40px 0;
+  border-radius: 25PX;
+  width: 30%;
+  outline: 2px solid black;
+}
+.formulario:hover{
+  box-shadow: 10px 20px 65px 15px rgba(255, 0, 0, 0.83);
+  transition: all 700ms ease-in-out;
+}
+.form-caja{
+  width: 100%;
+  margin: auto;
+}
+
+.formulario .grupo-inputs{
+  position: relative;
+  margin: 45px;
+  padding: 5px;
+ 
+ 
+}
+
+input{
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+ 
+}
+input:focus{
+  outline: none;
+  color: #5e5d5d;
+}
+
+label{
+  color: var(--colortextos);
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  
+}
+input:focus~label,
+input:valid~label{
+  top: -15px;
+  font-size: 12px;
+  color: #2929ca;
+}
+.barra-color{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra-color::before{
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right bottom, #f43b47 0%, #453a94 100%);
+  transition: 800ms ease width;
+  left: 0;
+  
+}
+input:focus~.barra-color::before{
+  width: 100%;
+}
+
+.warnings{
+  width: 300px;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  color: #b06ab3;
+  padding-top: 20px;
+  
+}
+
+button{
+  display: block;
+  width: 50%;
+  padding: 10px;
+
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background: linear-gradient(to right bottom, #f43b47 0%, #453a94 100%);
+  color: white;
+  font-size: 20px;
+  background-size: 100% 300%;
+  cursor: pointer;
+  border: none;
+  animation: gradient 3s ease infinite;
+  
+}
+button:hover{
+  color: black;
+  box-shadow: 8px 5px  black;
+  transition: all 1s ease;
+}
+@keyframes gradient {
+  20% {
+    background-position: 20% 30%;
+  }
+  50%{
+    background-position: 50% 100%;
+  }
+  80%{
+    background-position: 80% 20%;
+  }
+} 
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  background: linear-gradient(to right bottom, #f43b47 0%, #453a94 100%);
+  margin-top: 50px;
+  text-align: center;
+  margin-left: 25%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-size: 100% 300%;
+  animation: gradient 3s ease infinite;
+ 
+}
+a:hover{
+  box-shadow: 8px 5px  black;
+  color: black;
+  transition: all 1s ease;
+  
+}
+
+@media screen and (max-width: 1100px) {
+  .formulario{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .formulario{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  body{
+    background: url('../imagenes/perfil4391.jpg');
+    background-position:center ;
+  
+  }
+}
+@media screen and (max-width: 500px) {
+  .img-form{
+  margin: 0;
+  margin-left: 20%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .formulario{
+    width: 90%;
+    margin: 80px;
+    box-sizing: border-box;
+  }
+  .img-form{
+    text-align: start;
+   
+   font-size: 35px;
+  }
+ 
+}
